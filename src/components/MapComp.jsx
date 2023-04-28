@@ -74,7 +74,7 @@ function MapComp({ tasks }) {
                     onClick={() => setActiveMarker(null)}
                     mapContainerStyle={{ width: "100vw", height: "100vh" }}
                 >
-                    {tasks.map(({ _id, lat, lon, detail, imgStart, imgEnd, type, startDate_timeStamp, address, status }) => (
+                    {tasks.map(({ _id, lat, lon, detail, imgStart, imgEnd, type, startDate_timeStamp, address, status ,point}) => (
                         <MarkerF
                             key={_id}
                             position={{ lat: lat, lng: lon }}
@@ -91,6 +91,13 @@ function MapComp({ tasks }) {
                                             .unix(startDate_timeStamp)
                                             .format('D MMM BBBB เวลา HH:mm น.')}</h1>
                                         <h1>สถานที่ {address}</h1>
+                                        {
+                                            point >= 1 ? (
+                                                <h1>คะแนน : {point}</h1>
+                                            ) : (
+                                                <h1>คะแนน : ยังไม่ให้คะแนน</h1>
+                                            )
+                                        }
                                     </>
                                 </InfoWindowF>
                             ) : null}

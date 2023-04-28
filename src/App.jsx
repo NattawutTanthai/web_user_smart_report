@@ -17,7 +17,7 @@ function App() {
 
   const getTasks = async () => {
     handleOpen();
-    axios.get('https://api-smart-report.vercel.app/task')
+    axios.get('http://localhost:3333/task')
       .then(res => {
         console.log(res.data)
         setTasks(res.data)
