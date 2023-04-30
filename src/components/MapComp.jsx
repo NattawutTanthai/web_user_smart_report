@@ -93,7 +93,7 @@ function MapComp({ tasks }) {
                                         <h1>สถานที่ {address}</h1>
                                         {
                                             point >= 1 ? (
-                                                <h1>คะแนน : {point}</h1>
+                                                <h1>คะแนน : {point} คะแนน</h1>
                                             ) : (
                                                 <h1>คะแนน : ยังไม่ให้คะแนน</h1>
                                             )
